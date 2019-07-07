@@ -17,7 +17,7 @@ git clone https://github.com/kishore786/nextbusservice.git
 
 ## Prerequisites
 
-NA.
+Download java 8  and maven 3.5 to run locally
 
 
 ---
