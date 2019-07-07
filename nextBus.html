@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+            
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+	<script type="text/javascript" 
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+	<script type="text/javascript">
+        $(document).ready(function () {
+			
+		 $('#ajaxBtn').click(function(){
+
+				$.ajax({
+					url: "http://localhost:9002/Brooklyn Ctr - Fremont - 26th Av - Chicago - MOA/7th St  and Olson Memorial Hwy/south",					
+					type: 'GET',
+					dataType: 'json',
+					contentType: 'application/json;charset=UTF-8',
+					 crossDomain: true,
+					success: function (data) {
+					 console.log(data);
+						   alert('DATA: '+data);
+					      // $('p').append(data.message + ' ' + data.action + ' ' + data.status +' '+data.actionResponse);
+                          
+					},
+					error: function(e) {
+						alert('Error: '+e);
+					}  
+				});
+
+		 
+				//var ajaxReq = $.ajax('http://54.166.248.173:9002/Brooklyn Ctr - Fremont - 26th Av - Chicago - MOA/7th St  and Olson Memorial Hwy/south', {
+                //    dataType: 'json',
+				//	type: 'GET'                   
+                //});
+
+                //ajaxReq.success(function (data, status, jqXhr) {
+				//	$('p').append(data.message + ' ' + data.action + ' ' + data.status);
+               // });
+                
+               // ajaxReq.error(function (jqXhr, textStatus, errorMessage) {
+				//	$('p').append('Error: ' + errorMessage);
+              //  });
+				
+				
+			});
+
+        });
+    </script>
+</head>
+<body>
+	<h1> Next Bus GO
+	</h1>
+	<input type="button" id="ajaxBtn" value="GO" />
+	<p>
+	</p>
+</body>
+</html>

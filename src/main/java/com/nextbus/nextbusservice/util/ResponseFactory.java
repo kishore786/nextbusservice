@@ -2,6 +2,8 @@ package com.nextbus.nextbusservice.util;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 
 /**
  * @author Kishore Kar
@@ -27,8 +29,10 @@ public class ResponseFactory {
                 response.setAction(action);
                 response.setActionResponse("success");
                 response.setStatus(200);
-                response.setMessage(body != null && body.length>0?body[0]:"");
-                result = new ResponseEntity<>(response, HttpStatus.OK);
+                response.setMessage(body != null && body.length>0?body[0]:"");               
+        		MultiValueMap<String, String> headers = new LinkedMultiValueMap<>();
+        		headers.add("Access-Control-Allow-Origin", "*");
+                result = new ResponseEntity<>(response, headers ,HttpStatus.OK);
                 break;
             case 404:
                 response.setAction(action);

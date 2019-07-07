@@ -19,6 +19,7 @@ import com.nextbus.nextbusservice.util.ResponseFactory;
  * @author Kishore Kar
  */
 @RestController
+@RequestMapping(value = "/nextbus")
 public class NextBusController {
 	
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
