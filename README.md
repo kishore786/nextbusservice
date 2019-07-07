@@ -30,7 +30,15 @@ http://<<IP>>:9002/{route name}/{stop name}/{directrion}
 ## Example
 
 ```
-http://localhost:9002/Brooklyn Ctr - Fremont - 26th Av - Chicago - MOA/7th St  and Olson Memorial Hwy/east
+http://54.166.248.173:9002/Brooklyn Ctr - Fremont - 26th Av - Chicago - MOA/7th St  and Olson Memorial Hwy/south
+
+Response:-
+{
+  "actionResponse": "success",
+  "action": "GO",
+  "message": "20 Min",
+  "status": 200
+}
 ```
 
 ---
